@@ -1,0 +1,38 @@
+.table-app {
+  border-radius: 15px;
+  padding: 10px 20px 25px 10px;
+  border: none;
+
+  &__content {
+    width: 100%;
+    border-collapse: collapse;
+
+    .header {
+      &__item {
+        font-size: 14px;
+        padding: 10px 20px;
+        border: 1px solid #c9acac;
+        box-shadow: -2px -1px 5px #d5c3c3;
+      }
+    }
+
+    .body {
+      &__item {
+        padding: 5px 8px;
+        border: 1px solid #c9acac;
+        box-shadow: -2px -1px 5px #d5c3c3;
+        text-align: center;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+  }
+}
+
+@media (min-width: 325px) and (max-width: 1024px) {
+  .overflow {
+    overflow-y: auto;
+  }
+}

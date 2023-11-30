@@ -1,0 +1,13 @@
+.container_fruits {
+  &__list-fruits {
+    .title {
+      text-align: center;
+      font-family: 'RobotoBold', serif;
+      font-size: 32px;
+    }
+
+    &__container {
+      display: flex;
+    }
+  }
+}

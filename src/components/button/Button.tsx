@@ -2,7 +2,6 @@ import React, {FC, MouseEvent} from 'react';
 
 interface ButtonProps {
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
-    className?: string;
     disabled?: boolean;
     classButon?: string;
     text: string;
@@ -12,10 +11,10 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = (
     {
         onClick,
-        className,
         disabled,
         text,
-        textClass
+        textClass,
+        classButon
     }) => {
     const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
         if (onClick) {
@@ -25,7 +24,7 @@ const Button: FC<ButtonProps> = (
 
     return (
         <button
-            className={className}
+            className={classButon}
             onClick={handleClick}
             disabled={disabled}
         >

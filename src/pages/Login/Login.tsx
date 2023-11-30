@@ -1,4 +1,5 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 import Input from "../../components/input/Input";
 import Button from "../../components/button/Button";
@@ -15,7 +16,8 @@ const Login = () => {
         user: '',
         password: ''
     })
-    const [textValidation, setTextValidation] = useState<string>(null)
+    const [textValidation, setTextValidation] = useState<string>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (form.user.length > 1 && form.user.length < 6) {
@@ -35,11 +37,12 @@ const Login = () => {
     };
 
     const logIn = () => {
-
+        navigate('/fruits')
     }
+
     return (
-        <div className="container">
-            <div className="card">
+        <div className="container_login">
+            <div className="container_login__card">
                 <p className="title">Iniciar sesión</p>
                 <Input
                     name="user"
@@ -51,7 +54,7 @@ const Login = () => {
                     labelClass="label-class"
                     validateText={textValidation}
                 />
-                
+
                 <Input
                     name="password"
                     value={form.password}
@@ -65,7 +68,7 @@ const Login = () => {
 
                 <div className="footer-buttons">
                     <Button
-                        className="right-button"
+                        classButon="right-button"
                         onClick={logIn}
                         text="Ingresar"
                         textClass="text-class"
