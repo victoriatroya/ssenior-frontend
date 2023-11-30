@@ -1,0 +1,13 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  .text-validate {
+    color: red;
+    font-size: 12px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
