@@ -1,10 +1,13 @@
 .input-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 
-  .text-validate {
-    color: red;
-    font-size: 12px;
+  .icon {
+    position: absolute;
+    top: 25px;
+    left: 90%;
+    cursor: pointer;
   }
 }
 

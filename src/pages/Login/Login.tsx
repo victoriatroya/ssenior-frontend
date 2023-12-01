@@ -14,19 +14,10 @@ interface FormState {
 const Login = () => {
     const [form, setForm] = useState<FormState>({
         user: '',
-        password: ''
+        password: '',
     })
-    const [textValidation, setTextValidation] = useState<string>(null);
+
     const navigate = useNavigate();
-
-    useEffect(() => {
-        if (form.user.length > 1 && form.user.length < 6) {
-            setTextValidation('El usuario debe contener mínimo 6 carácteres')
-        } else {
-            setTextValidation('')
-        }
-
-    }, [form.user]);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.target;
@@ -41,8 +32,8 @@ const Login = () => {
     }
 
     return (
-        <div className="container_login">
-            <div className="container_login__card">
+        <div className="container-login">
+            <div className="container-login__card">
                 <p className="title">Iniciar sesión</p>
                 <Input
                     name="user"
@@ -52,7 +43,7 @@ const Login = () => {
                     label="Usuario"
                     classInput="input-class"
                     labelClass="label-class"
-                    validateText={textValidation}
+                    idTest="input-text"
                 />
 
                 <Input
@@ -63,7 +54,7 @@ const Login = () => {
                     label="Contraseña"
                     classInput="input-class"
                     labelClass="label-class"
-                    validateText=""
+                    idTest="input-password"
                 />
 
                 <div className="footer-buttons">
